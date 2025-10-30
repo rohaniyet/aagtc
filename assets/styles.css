@@ -248,3 +248,86 @@ footer {
   .services-grid, .stats { flex-direction: column; }
   header { flex-direction: column; }
 }
+
+/* ===== RESPONSIVE FIX FOR MOBILE & TABLET ===== */
+@media (max-width: 992px) {
+  header {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+  nav {
+    margin-top: 10px;
+    text-align: center;
+  }
+  nav a {
+    display: inline-block;
+    margin: 8px;
+    font-size: 14px;
+  }
+
+  .hero {
+    height: 60vh;
+  }
+  .slides img {
+    height: 60vh;
+  }
+  .hero-text {
+    font-size: 1.5rem;
+    padding: 0 10px;
+  }
+
+  #about p {
+    padding: 0 15px;
+    font-size: 0.95rem;
+  }
+
+  .founder img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .services-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service-card {
+    width: 90%;
+    max-width: 350px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 25px;
+    padding: 40px 10px;
+  }
+
+  #contact form {
+    width: 90%;
+  }
+}
+
+@media (max-width: 576px) {
+  header img {
+    height: 40px;
+  }
+  .hero {
+    height: 50vh;
+  }
+  .hero-text {
+    font-size: 1.2rem;
+  }
+  .founder img {
+    width: 130px;
+    height: 130px;
+  }
+  #about h2, #services h2, #contact h2 {
+    font-size: 1.6rem;
+  }
+  #contact input, #contact textarea {
+    font-size: 0.9rem;
+  }
+  footer {
+    font-size: 0.75rem;
+  }
+}
+
