@@ -1,0 +1,250 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #000;
+  color: #fff;
+}
+
+/* HEADER */
+header {
+  background: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo-area {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.logo-area img {
+  height: 55px;
+  border-radius: 10px;
+}
+.logo-area h1 {
+  font-size: 1.2rem;
+  color: #d4af37;
+}
+nav a {
+  margin: 0 10px;
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 500;
+}
+nav a:hover { color: #fff; }
+.quote-btn {
+  background: linear-gradient(45deg, #d4af37, #f7d358);
+  color: #000;
+  padding: 8px 15px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.quote-btn:hover {
+  box-shadow: 0 0 15px #d4af37;
+}
+
+/* ===== NEW HERO SLIDER ===== */
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-radius: 25px;
+  margin: 20px auto;
+  max-width: 95%;
+  height: 90vh;
+}
+
+.hero-slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.hero-slider .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.5s ease-in-out;
+}
+
+.hero-slider .slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.hero-slider img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 25px;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #d4af37;
+  font-size: 2.4rem;
+  font-weight: 600;
+  text-align: center;
+  text-shadow: 0 0 25px rgba(212,175,55,0.9);
+  width: 80%;
+}
+
+
+/* ABOUT US */
+#about {
+  text-align: center;
+  padding: 60px 20px;
+}
+#about h2 {
+  color: #d4af37;
+  font-size: 2rem;
+  border-bottom: 2px solid #d4af37;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+.founder img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  border: 5px solid #d4af37;
+  box-shadow: 0 0 25px rgba(212,175,55,0.5);
+  margin-top: 20px;
+}
+.founder p {
+  max-width: 800px;
+  margin: 25px auto;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* SERVICES */
+#services {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(180deg, #111, #000);
+}
+.services-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+.service-card {
+  background: #111;
+  border: 2px solid #d4af37;
+  border-radius: 12px;
+  width: 280px;
+  padding: 25px;
+  transition: 0.3s;
+}
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(212,175,55,0.6);
+}
+.service-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.service-card h3 {
+  color: #d4af37;
+  margin-bottom: 10px;
+}
+
+/* STATS */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  background: #000;
+  padding: 50px 20px;
+}
+.stat {
+  font-size: 2.5rem;
+  color: #d4af37;
+  font-weight: bold;
+}
+.stat-label {
+  color: #ccc;
+  margin-top: 5px;
+}
+
+/* CONTACT */
+#contact {
+  text-align: center;
+  padding: 60px 20px;
+  background: #111;
+}
+#contact .contact-info p {
+  color: #ccc;
+  margin: 8px 0;
+}
+#contact a {
+  color: #d4af37;
+  text-decoration: none;
+}
+#contact form {
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#contact input, #contact textarea {
+  width: 80%;
+  max-width: 500px;
+  background: transparent;
+  border: 1px solid #d4af37;
+  border-radius: 6px;
+  padding: 12px;
+  color: #fff;
+  margin: 8px 0;
+}
+#contact button {
+  background: linear-gradient(45deg, #d4af37, #f7d358);
+  color: #000;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+#contact button:hover {
+  box-shadow: 0 0 20px #d4af37;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: #000;
+  color: #888;
+  border-top: 1px solid #222;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .services-grid, .stats { flex-direction: column; }
+  header { flex-direction: column; }
+}
