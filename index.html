@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azam Afridi Goods Transport Company</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header>
+  <div class="logo-area">
+    <img src="assets/logo.png" alt="Logo">
+    <h1>Azam Afridi Goods Transport Company</h1>
+  </div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="https://wa.me/923008885151" class="quote-btn" target="_blank">Get Quote</a>
+  </nav>
+</header>
+
+<!-- ===== HERO SLIDER (Updated Premium Version) ===== -->
+<section class="hero" id="home">
+  <div class="hero-slider">
+    <div class="slide active">
+      <img src="assets/fleet1.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="hero-text">Reliable Transport — Excellence on Every Route</div>
+    </div>
+    <div class="slide">
+      <img src="assets/fleet2.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="hero-text">Trusted Nationwide — Delivering with Integrity</div>
+    </div>
+    <div class="slide">
+      <img src="assets/fleet3.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="hero-text">Your Cargo, Our Commitment</div>
+    </div>
+    <div class="slide">
+      <img src="assets/fleet4.jpg" alt="">
+      <div class="overlay"></div>
+      <div class="hero-text">Safe, Swift & Professional Logistics</div>
+    </div>
+  </div>
+</section>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.hero-slider .slide');
+const totalSlides = slides.length;
+
+function showSlide(index) {
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === index) slide.classList.add('active');
+  });
+}
+
+setInterval(() => {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  showSlide(currentSlide);
+}, 5000); // Change slide every 5 seconds
+</script>
+
+
+<!-- ===== ABOUT US ===== -->
+<section id="about">
+  <h2>About Us</h2>
+  <div class="founder">
+    <img src="assets/founder.jpg" alt="Founder">
+    <p><b>Azam Afridi Goods Transport Company</b> traces its roots back to 1920, when the father of Mr. Sharaf Gul Afridi began his journey in Pakistan’s early transport industry.  
+    After years of dedication, Mr. Sharaf Gul Afridi established AAGTC in 1984 — named after his son <b>Azam Afridi</b>.  
+    Today, with over 100 years of family legacy, AAGTC proudly operates 300+ vehicles across Pakistan, serving major corporations with honesty, reliability, and commitment.</p>
+  </div>
+</section>
+
+<!-- ===== OUR SERVICES ===== -->
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services-grid">
+    <div class="service-card">
+      <img src="assets/truck.jpg" alt="">
+      <h3>Container Truck Services</h3>
+      <p>Dependable long-distance trucking for containers and industrial goods — secure, safe, and on-time nationwide.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="assets/mazda.jpg" alt="">
+      <h3>Mazda Truck Services</h3>
+      <p>Affordable and flexible for medium-size cargo — perfect for city and regional deliveries with reliable drivers.</p>
+    </div>
+
+    <div class="service-card">
+      <img src="assets/railway.jpg" alt="">
+      <h3>Railway Cargo Services</h3>
+      <p>Fast, cost-effective cargo through Pakistan Railways — for heavy or bulk shipments with scheduled reliability.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats">
+  <div>
+    <div class="stat" data-target="300">0</div>
+    <div class="stat-label">Vehicles</div>
+  </div>
+  <div>
+    <div class="stat" data-target="100">0</div>
+    <div class="stat-label">Years of Legacy</div>
+  </div>
+  <div>
+    <div class="stat" data-target="5000">0</div>
+    <div class="stat-label">Successful Deliveries</div>
+  </div>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact">
+  <h2>Contact Us</h2>
+  <div class="contact-info">
+    <p>📍 <b>Address:</b> New General Truck Stand, Ravi Link Road, Lahore, Pakistan</p>
+    <p>☎️ <b>Phone (Office):</b> 042-37702053-54, 37701271, 37705722, 37722651, 37725651</p>
+    <p>📱 <b>Mobile (Office):</b> 0300-4004058</p>
+    <p>👤 <b>Proprietor:</b> Azam Ali Afridi — <a href="https://wa.me/923008885151" target="_blank">0300-8885151 (WhatsApp)</a></p>
+    <p>🕓 <b>Office Hours:</b> 24/7</p>
+    <p>✉️ <b>Email:</b> info@aagt.com.pk</p>
+  </div>
+
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea rows="4" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  © AAGTC 2025 – All Rights Reserved by Azam Afridi
+</footer>
+
+<!-- ===== COUNTER SCRIPT ===== -->
+<script>
+const counters = document.querySelectorAll('.stat');
+counters.forEach(counter => {
+  const updateCount = () => {
+    const target = +counter.getAttribute('data-target');
+    const count = +counter.innerText;
+    const speed = 30;
+    const increment = target / 60;
+    if (count < target) {
+      counter.innerText = Math.ceil(count + increment);
+      setTimeout(updateCount, speed);
+    } else {
+      counter.innerText = target + "+";
+    }
+  };
+  updateCount();
+});
+</script>
+
+</body>
+</html>
